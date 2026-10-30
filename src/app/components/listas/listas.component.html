@@ -1,0 +1,31 @@
+
+<ion-list>
+  <ion-item
+    *ngFor="let lista of listasFiltradas"
+    button
+    (click)="listaSeleccionada(lista)"
+  >
+    <ion-label>
+      <h2>{{ lista.titulo }}</h2>
+      <p>{{ lista.completada ? 'Completada' : 'Pendiente' }}</p>
+    </ion-label>
+
+    <ion-button
+      slot="end"
+      fill="clear"
+      color="primary"
+      (click)="$event.stopPropagation(); editarLista(lista)"
+    >
+      Editar
+    </ion-button>
+
+    <ion-button
+      slot="end"
+      fill="clear"
+      color="danger"
+      (click)="$event.stopPropagation(); eliminarLista(lista)"
+    >
+      Eliminar
+    </ion-button>
+  </ion-item>
+</ion-list>

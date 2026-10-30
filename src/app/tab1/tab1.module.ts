@@ -1,11 +1,12 @@
+
 import { IonicModule } from '@ionic/angular/lazy';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { ListasModule } from '../listas/listas-module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    ListasModule
   ],
   declarations: [Tab1Page]
 })
